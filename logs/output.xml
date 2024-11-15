@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-03T13:21:21.710449" rpa="false" schemaversion="5">
+<suite id="s1" name="Click" source="C:\projects\automacaoMobile\yodapp-robot\test\click.robot">
+<test id="s1-t1" name="Deve abrir a tela principal" line="7">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-11-03T13:21:21.875158" elapsed="11.672048"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Yodapp</arg>
+<arg>10</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-11-03T13:21:33.547706" elapsed="5.107679"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-11-03T13:21:39.372027" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>QAX</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-11-03T13:21:38.655583" elapsed="0.716562"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T13:21:44.373196" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T13:21:39.372443" elapsed="5.000928"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-11-03T13:21:44.373707" elapsed="0.463755"/>
+</kw>
+<status status="PASS" start="2024-11-03T13:21:21.874524" elapsed="22.964304"/>
+</test>
+<status status="PASS" start="2024-11-03T13:21:21.711519" elapsed="23.132214"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Click">Click</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
